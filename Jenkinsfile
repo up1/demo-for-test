@@ -27,7 +27,12 @@ pipeline {
         }
         stage('run-postman') {
             steps {
-                sh 'newman run day01.postman_collection.json'
+                sh 'newman run day01.postman_collection.json --reporters cli,junit'
+            }
+            post {
+              always {
+                    robot archiveDirName: 'robot-plugin', outputPath: './', overwriteXAxisLabel: '', passThreshold: 100.0, unstableThreshold: 100.0
+              }
             }
         }
     }

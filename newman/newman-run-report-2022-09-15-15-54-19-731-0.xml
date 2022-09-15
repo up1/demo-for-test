@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="day01" tests="2" time="0.737">
+  <testsuite name="Step 1" id="da3cc219-8f25-4bea-8800-65b01f99ee71" timestamp="2022-09-15T15:54:18.922Z" tests="3" failures="0" errors="0" time="0.205">
+    <testcase name="Status code is 200" time="0.205" classname="Day01"/>
+    <testcase name="Your test name" time="0.205" classname="Day01"/>
+    <testcase name="Schema is valid" time="0.205" classname="Day01"/>
+  </testsuite>
+  <testsuite name="Step 2" id="ee035c19-5744-4a76-9573-3a3e09540b8b" timestamp="2022-09-15T15:54:18.922Z" tests="0" failures="0" errors="0" time="0.532"/>
+</testsuites>
