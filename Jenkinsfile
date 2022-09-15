@@ -31,7 +31,8 @@ pipeline {
             }
             post {
               always {
-                    robot archiveDirName: 'robot-plugin', outputPath: './', overwriteXAxisLabel: '', passThreshold: 100.0, unstableThreshold: 100.0
+                    sh 'rm -rf newman/'
+                    junit 'newman/*.xml'
               }
             }
         }
