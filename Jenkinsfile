@@ -27,11 +27,11 @@ pipeline {
         }
         stage('run-postman') {
             steps {
+                sh 'rm -rf newman/'
                 sh 'newman run day01.postman_collection.json --reporters cli,junit'
             }
             post {
               always {
-                    sh 'rm -rf newman/'
                     junit 'newman/*.xml'
               }
             }
