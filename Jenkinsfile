@@ -5,6 +5,16 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
+        stage('deploy to xxx') {
+            steps {
+                sh 'ls'
+            }
+        }
+        stage('initial data test') {
+            steps {
+                sh 'ls'
+            }
+        }
         stage('run-selenium-side-runner') {
             steps {
                 sh 'selenium-side-runner demo_02.side --output-directory=./reports --output-format=junit --server http://159.223.80.233/wd/hub -c "browserName=chrome"'
